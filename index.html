@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Roleplay Community (ER:LC)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the India Roleplay Community (ER:LC)</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#rules">Rules</a>
+        <a href="#history">History</a>
+        <a href="#join">Join Us</a>
+    </nav>
+    <button id="theme-toggle">Toggle Theme</button>
+</header>
+
+<div class="hero">
+    <h2>Join the Adventure!</h2>
+    <p class="holiday-message">🎄 Merry Christmas! 🎁✨</p>
+</div>
+
+<div class="content">
+    <section id="about" class="card">
+        <h3>About Us</h3>
+        <p>The India Roleplay Community (ER:LC) is the Discord community server based on the ER:LC private server. Enjoy playing IRP!</p>
+    </section>
+
+    <section id="rules" class="card">
+        <h3>Community Rules</h3>
+        <ul>
+            <li>🤝 Respect Everyone: Treat all members with respect. No harassment, bullying, or hate speech will be tolerated.</li>
+            <li>🎭 Roleplay Etiquette: Stay in character during roleplay sessions. Avoid out-of-character (OOC) discussions in roleplay channels.</li>
+            <li>🔞 Appropriate Content: Keep all content appropriate for all ages. No NSFW or offensive material.</li>
+            <li>🚷 No Spamming: Avoid spamming messages, links, or images in any channel.</li>
+            <li>📛 Name: No offensive names and profile pictures.</li>
+            <li>🛡️ Reporting Issues: Report any rule violations or issues to the moderators or admins.</li>
+            <li>🎙️ Voice Chat Conduct: Use voice chat respectfully. No yelling, excessive background noise, or inappropriate language.</li>
+            <li>🎉 Have Fun: Enjoy your time on the server and contribute to a positive and engaging roleplay environment.</li>
+            <li>⚠️ Note: Failure to comply with these rules may result in warnings, kicks, or bans. More rules will be out!</li>
+        </ul>
+    </section>
+
+    <section id="history" class="card">
+        <h3>History</h3>
+        <p>The India Roleplay Community (ER:LC) was founder in 18 July 2024 to create a welcoming community for roleplayers.</p>
+        <p>Our foundership team Shubhra9143Q (Founder), 0003ASHIR (Co-Founder) and Andy (Co-Founder) created this community together! </p>
+        <p>Now, we have over 100 members and we are trying to get 500 members #Roadto500!</p>
+    </section>
+
+    <section id="join" class="card">
+        <h3>Join Us!</h3>
+        <p>Ready to dive into the world of roleplay? Click the button below to join our Discord server!</p>
+        <a href="https://discord.gg/JRs23ewn3G" class="button">Join the Discord</a>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 India Roleplay Community (ER:LC). All rights reserved.</p>
+</footer>
+
+<script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        if (body.classList.contains('dark-theme')) {
+            themeToggleButton.textContent = 'Switch to Light Theme';
+        } else {
+            themeToggleButton.textContent = 'Switch to Dark Theme';
+        }
+    });
+</script>
+
+</body>
+</html>

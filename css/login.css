@@ -1,0 +1,68 @@
+/* Login Page Styles */
+body {
+    background-color: #f4f4f4; /* Light background for the login page */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #35424a; /* Dark color for the heading */
+}
+
+form {
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Fixed width for the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #35424a; /* Dark color for labels */
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #ff5722; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #ff5722; /* Vibrant orange for the button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+.error-message {
+    color: red; /* Red color for error messages */
+    text-align: center;
+    margin-top: 10px;
+}

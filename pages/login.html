@@ -1,0 +1,59 @@
+<!-- public/login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - India Roleplay Community (ER:LC)</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS stylesheet -->
+</head>
+<body>
+
+<h2>Login</h2>
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="rank">Rank:</label>
+    <select id="rank" name="rank" required>
+        <option value="Staff">Staff</option>
+        <option value="HR">HR</option>
+        <option value="Directive">Directive</option>
+        <option value="Foundership">Foundership</option>
+    </select>
+    
+    <button type="submit">Login</button>
+    <div class="error-message" id="error-message"></div> <!-- Placeholder for error messages -->
+</form>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+    const rank = e.target.rank.value;
+
+    const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password, rank }),
+    });
+
+    if (response.ok) {
+        const data = await response.json();
+        alert('Login successful');
+        localStorage.setItem('userRole', data.rank); // Store the user's rank in localStorage
+        window.location.href = 'index.html'; // Redirect to main page
+    } else {
+        document.getElementById('error-message').textContent = 'Login failed: Invalid credentials'; // Show error message
+    }
+});
+</script>
+
+</body>
+</html>
